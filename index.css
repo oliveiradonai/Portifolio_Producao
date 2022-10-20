@@ -141,6 +141,18 @@ p {
     margin: auto;
 }
 
+.d-none{
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.d-block{
+    visibility: visible !important;
+    opacity: 1 !important;
+    -webkit-transition: opacity 0.6s linear, visibility 0.6s linear;
+    transition: opacity 0.6s linear, visibility 0.6s linear;
+}
+
 #projects h2 {
     margin-top: 15px;
     font-size: 2rem;

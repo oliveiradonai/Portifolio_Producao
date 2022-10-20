@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    CheckIfMobile(); 
+    TransitionCarousel();
+    CheckIfMobile();
 })
 
 $(window).resize(function () {
@@ -23,3 +24,8 @@ function CheckIfMobile(){
         $('.carousel').slick('unslick');
     }
 };
+
+function TransitionCarousel(){
+    $('.projects').removeClass('d-none');
+    $('.projects').addClass('d-block');
+}
