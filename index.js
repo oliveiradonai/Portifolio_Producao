@@ -1,6 +1,7 @@
 $(document).ready(function() {
     TransitionCarousel();
     CheckIfMobile();
+    MyAge();
 })
 
 $(window).resize(function () {
@@ -28,4 +29,18 @@ function CheckIfMobile(){
 function TransitionCarousel(){
     $('.projects').removeClass('d-none');
     $('.projects').addClass('d-block');
+}
+
+function MyAge() {
+    var today = new Date();
+    var myBirthDate = new Date('1999-01-16');
+  
+    var myAge = today.getFullYear() - myBirthDate.getFullYear();
+    var month = today.getMonth() - myBirthDate.getMonth();
+  
+    if (month < 0 || (month === 0 && today.getDate() < myBirthDate.getDate())) {
+        myAge--;
+    }
+  
+    $('.age').text(myAge.toString())
 }
