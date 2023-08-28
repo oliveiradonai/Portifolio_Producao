@@ -21,9 +21,6 @@ function CheckIfMobile(){
             autoplaySpeed: 2000,
         });
     }
-    else{
-        $('.carousel').slick('unslick');
-    }
 };
 
 function TransitionCarousel(){
